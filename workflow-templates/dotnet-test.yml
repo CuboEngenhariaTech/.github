@@ -1,0 +1,17 @@
+name: DotNet Test App
+
+on:
+  pull_request:
+    branches: [$default-branch ]
+
+  jobs:
+    build:
+
+      env:
+        TEST_PROJECT_PATH: ''
+        PROJECT_PATH:  ''
+
+      runs-on: ${{ matrix.os }}
+      strategy:
+        matrix:
+          dotnet
